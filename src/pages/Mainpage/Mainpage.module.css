@@ -1,0 +1,138 @@
+.container {
+    margin: 0 auto;
+    max-width: 1320px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.categoriesBtnWrapper {
+    position: relative;
+}
+
+.categoriesBtn {
+    width: 132px;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background: #4b4b4b;
+    font-size: 14px;
+    padding-left: 32px;
+}
+.lines {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+}
+
+.line {
+    margin-top: 3px;
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s;
+}
+.line:first-child {
+    margin-top: 0;
+}
+
+.lines.active .line:nth-child(2) {
+    display: none;
+}
+
+.lines.active .line:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.lines.active .line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-2px) translateX(1px);
+}
+
+.lines.active .line {
+    margin-top: 0;
+}
+
+.searchInput {
+    width: 490px;
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 32px;
+    background: #ededed;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: none;
+    outline: none;
+    color: #323232;
+}
+
+.searchWrapper {
+    position: relative;
+    display: flex;
+}
+
+.searchIcon {
+    padding: 0 8px;
+    background: #ededed;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon.active {
+    background: #00ad64;
+    cursor: pointer;
+}
+
+.searchIcon svg path {
+    stroke: none;
+    color: #a6a6a6;
+}
+.searchIcon.active svg path {
+    color: #fff;
+}
+.searchInput.active {
+    border: 1px solid #00ad64;
+    background: #fff;
+}
+
+.cross {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3.5rem;
+    cursor: pointer;
+}
+
+.cross.hide {
+    display: none;
+}
+
+.location {
+    color: #00ad64;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.locationWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.locationWrapper path {
+    color: #00ad64;
+}
+
+.locationWrapper:hover path,
+.location:hover {
+    color: #009a59;
+}

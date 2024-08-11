@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.category {
+    color: #262626;
+    font-size: 14px;
+    transition: color 0.2s ease-in-out;
+}
+
+.category:hover {
+    color: #00ad64;
+}
+
+.img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}

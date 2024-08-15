@@ -174,79 +174,6 @@
 .cross.hide {
     display: none;
 }
-
-/* .location {
-    color: #00ad64;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.locationWrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
-.locationWrapper path {
-    color: #00ad64;
-}
-
-.locationWrapper:hover path,
-.locationWrapper:hover .location {
-    color: #009a59;
-}
-.locationDropdown::before {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: -10px;
-    left: 35px;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #f4f4f4;
-}
-.locationDropdown {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 150%;
-    border-radius: 4px;
-    padding: 24px;
-    background: #ffffff;
-    width: 300px;
-    cursor: auto;
-}
-.locationDropdown.active {
-    display: block;
-    z-index: 2;
-}
-.locationDropdownRegion {
-    color: #000;
-    font-size: 16px;
-    margin-bottom: 16px;
-}
-
-.locationDropdownSelects {
-    display: flex;
-    flex-direction: column;
-}
-
-.locationDropdownBtn {
-    width: 100%;
-    background: #007aff;
-    color: #fff;
-    border-radius: 8px;
-    padding: 0 16px;
-    font-size: 14px;
-    line-height: 40px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    font-weight: 600;
-} */
 .addOffer {
     margin-right: 1rem;
     background: #00ad64;
@@ -303,7 +230,6 @@
     max-width: 900px;
     margin-top: 1rem;
     display: flex;
-    gap: 2rem;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -311,12 +237,244 @@
     scroll-behavior: auto;
 }
 
+.popularCategoriesBlock {
+    margin-right: 2rem;
+}
+.popularCategoriesBlock:last-child {
+    margin-right: 0;
+}
+
 .sectionWrapper {
-    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
 }
 
+.popularCategories {
+    margin-top: 1rem;
+}
+
+.newsBannersWrapper {
+    margin-top: 1rem;
+}
+
 .popularCategoriesBlock *:last-child {
     margin-bottom: 0;
+}
+
+.newsBanners {
+    height: 158px;
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+    gap: 0.5rem;
+    user-select: none;
+}
+
+.filterWrapper {
+    padding-top: 8px;
+    width: 300px;
+}
+
+.filter {
+    margin-top: 40px;
+}
+
+.filter * {
+    color: black;
+}
+
+.filterPriceText,
+.filterStateText {
+    font-size: 14px;
+    color: #262626;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.filterPriceInputs {
+    margin-top: 0.25rem;
+}
+
+.filterPriceInputs * {
+    width: 50%;
+}
+
+.filterPriceInputs input {
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: inset 0 0 0 0.5px #d9d9d9;
+    color: #000;
+}
+
+.filterPriceInputs input::placeholder {
+    color: #262626;
+}
+
+.filterPriceInputs input:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.filterPriceInputs input:focus {
+    box-shadow: inset 0 0 0 1px #00ad64;
+}
+
+.filterPriceInputs input:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.filterStateWrapper {
+    margin-top: 0.25rem;
+}
+.filterStateButtons {
+    display: flex;
+    gap: 8px;
+}
+.filterStateType {
+    padding: 0 16px;
+}
+
+.filterStateType {
+    border: 1px solid #d9d9d9;
+    height: 36px;
+    font-style: 14px;
+    color: #262626;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.filterStateType:hover {
+    border: 1px solid #a6a6a6;
+}
+
+.filterStateType.active {
+    background-color: #4b4b4b;
+    border-color: #4b4b4b;
+    color: #fff;
+}
+
+.filterElectionsWrapper {
+    margin-top: 0.25rem;
+}
+
+.filterElectionsWrapper:first-child {
+    margin-top: 0;
+}
+
+.filterElectionWrapper {
+    margin-top: 0.5rem;
+}
+
+.filterElectionWrapper label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.filterElectionWrapper input {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #a6a6a6;
+    border-radius: 4px;
+    vertical-align: middle;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.filterElectionWrapper input:checked {
+    background: #00ad64;
+    border-color: #00ad64;
+}
+
+.filterElectionsWrapper input::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url('src/images/icons/daw.svg');
+    background-position: 50%;
+}
+
+.filterElectionWrapper label:hover input {
+    border-color: #00ad64;
+}
+
+.filterElectionText {
+    font-size: 14px;
+    height: 19px;
+    color: #262626;
+}
+
+.filterWrapper > button {
+    font-weight: 700;
+    margin-top: 8px;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: 0.2s all ease-in-out;
+}
+.filterWrapper button:first-child {
+    margin-bottom: 0;
+}
+
+.filterSaveSearch {
+    color: rgb(0, 173, 100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border: 1px solid #d9d9d9;
+}
+
+.filterSaveSearch:hover {
+    border: 1px solid #a6a6a6;
+}
+
+.filterSaveSearch path:first-child {
+    stroke: rgb(0, 173, 100);
+    stroke-width: 2;
+    color: transparent;
+}
+
+.filterSaveSearch path:last-child {
+    color: rgb(0, 173, 100);
+}
+
+.filterResetSearch {
+    color: #808080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.filterResetSearch:hover {
+    color: #262626;
+}
+
+.filterSearch {
+    color: #fff;
+    background-color: #00ad64;
+}
+
+.filterSearch:hover {
+    background-color: #009a59;
+}
+
+.filterSearch:active {
+    background-color: #008950;
 }

@@ -25,8 +25,8 @@
     position: absolute;
     content: '';
     opacity: 0;
-    background: linear-gradient(90deg, #e8f5ff, #ffebce);
-    transition: opacity 5.3s ease;
+    /*  background: linear-gradient(90deg, #e8f5ff, #ffebce); */
+    transition: opacity 0.3s ease;
     border-radius: 8px;
     z-index: -1;
     width: 100%;

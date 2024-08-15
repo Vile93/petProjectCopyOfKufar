@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import classes from './SwiperBlock.module.css';
 import ArrowLeft from '/src/images/icons/bigArrowLeft.svg?react';
 

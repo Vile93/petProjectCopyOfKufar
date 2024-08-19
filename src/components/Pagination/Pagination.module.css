@@ -1,0 +1,72 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 100px;
+    user-select: none;
+}
+
+.numOfPage {
+    width: 32px;
+    height: 32px;
+    color: #808080;
+    border-radius: 50%;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numsOfPage {
+    display: flex;
+    gap: 8px;
+}
+
+.numOfPage.active {
+    background-color: #808080;
+    color: #fff;
+}
+
+.ArrowLeft svg,
+.ArrowRight svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ArrowRight {
+    transform: rotate(180deg);
+}
+
+.ArrowLeft,
+.ArrowRight {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #808080;
+}
+
+.ArrowLeft,
+.ArrowRight,
+.numOfPage {
+    cursor: pointer;
+}
+
+.ArrowLeft:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+.sixNumOfPage {
+    display: none;
+}
+
+.sixNumOfPage.show {
+    display: flex;
+}
+
+.ellipsis {
+    cursor: auto;
+}

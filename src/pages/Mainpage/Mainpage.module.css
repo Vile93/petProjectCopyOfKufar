@@ -277,6 +277,7 @@
 
 .filter {
     margin-top: 40px;
+    gap: 1rem;
 }
 
 .filter * {
@@ -417,7 +418,8 @@
     color: #262626;
 }
 
-.filterWrapper > button {
+.filterWrapper > button,
+.filterSticky button {
     font-weight: 700;
     margin-top: 8px;
     height: 40px;
@@ -428,7 +430,10 @@
     transition: 0.2s all ease-in-out;
 }
 .filterWrapper button:first-child {
-    margin-bottom: 0;
+    margin-top: 4px;
+}
+.filterWrapper .filterResetSearch {
+    margin-top: 0;
 }
 
 .filterSaveSearch {
@@ -469,6 +474,7 @@
 .filterSearch {
     color: #fff;
     background-color: #00ad64;
+    margin-bottom: 8px;
 }
 
 .filterSearch:hover {
@@ -477,4 +483,74 @@
 
 .filterSearch:active {
     background-color: #008950;
+}
+
+.filterSticky {
+    background: #fff;
+    position: sticky;
+    bottom: 0;
+}
+
+.offers {
+    flex: 1;
+}
+.offersWrapper {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.offersTitle {
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+}
+
+.offersTypes {
+    margin-top: 28px;
+    display: flex;
+    gap: 16px;
+}
+
+.offersType {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.offersType.active {
+    font-weight: 700;
+}
+
+.offersAllBtn {
+    padding: 0 16px;
+    background: #007aff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
+    height: 40px;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .headerTop,
+    .filterWrapper,
+    .banner {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .offers {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .offers {
+        grid-template-columns: 1fr 1fr;
+    }
 }

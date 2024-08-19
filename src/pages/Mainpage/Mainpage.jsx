@@ -18,6 +18,8 @@ import SwiperBlock from '../../components/SwiperBlock/SwiperBlock';
 import Banner from '../../components/Banner/Banner';
 import HeaderLocationDropdown from '../../components/HeaderLocationDropdown/HeaderLocationDropdown';
 import NewsBanner from '../../components/NewsBanner/NewsBanner';
+import Offer from '../../components/Offer/Offer';
+import Pagination from '../../components/Pagination/Pagination';
 export default function Mainpage() {
     const linesRef = useRef();
     const searchIconRef = useRef();
@@ -27,7 +29,9 @@ export default function Mainpage() {
     const popularCategoriesRef = useRef();
     const newsBannersRef = useRef();
     const [searchText, setSearchText] = useState('');
-
+    const testArr = [];
+    testArr.length = 40;
+    testArr.fill(null);
     return (
         <div
             className={classes.wrapper}
@@ -475,11 +479,14 @@ export default function Mainpage() {
                                     </SwiperBlock>
                                 </section>
                                 <section>
-                                    <Banner
-                                        background={
-                                            'linear-gradient(90deg, #e8f5ff, #ffebce)'
-                                        }
-                                    />
+                                    <div className={classes.banner}>
+                                        {' '}
+                                        <Banner
+                                            background={
+                                                'linear-gradient(90deg, #e8f5ff, #ffebce)'
+                                            }
+                                        />
+                                    </div>
                                 </section>
                             </div>
                             <div
@@ -502,12 +509,15 @@ export default function Mainpage() {
                                     </SwiperBlock>
                                 </section>
                                 <section>
-                                    <Banner
-                                        background={
-                                            'linear-gradient(90deg,#d6f2e6,#7fd5b1)'
-                                        }
-                                        defaultBackground={'#d6f2e6;'}
-                                    />
+                                    <div className={classes.banner}>
+                                        {' '}
+                                        <Banner
+                                            background={
+                                                'linear-gradient(90deg,#d6f2e6,#7fd5b1)'
+                                            }
+                                            defaultBackground={'#d6f2e6;'}
+                                        />
+                                    </div>
                                 </section>
                             </div>
                             <div
@@ -646,19 +656,25 @@ export default function Mainpage() {
                                                     </label>
                                                 </div>
                                             </div>
-                                            <button
-                                                className={
-                                                    classes.filterSaveSearch
-                                                }
+                                            <div
+                                                className={classes.filterSticky}
                                             >
-                                                <SaveSearch />
-                                                Сохранить поиск
-                                            </button>
-                                            <button
-                                                className={classes.filterSearch}
-                                            >
-                                                Показать 10 объявлений
-                                            </button>
+                                                <button
+                                                    className={
+                                                        classes.filterSaveSearch
+                                                    }
+                                                >
+                                                    <SaveSearch />
+                                                    Сохранить поиск
+                                                </button>
+                                                <button
+                                                    className={
+                                                        classes.filterSearch
+                                                    }
+                                                >
+                                                    Показать 10 объявлений
+                                                </button>
+                                            </div>
                                             <button
                                                 className={
                                                     classes.filterResetSearch
@@ -669,6 +685,34 @@ export default function Mainpage() {
                                             </button>
                                         </div>
                                     </form>
+                                </section>
+                                <section className={classes.offers}>
+                                    <h1 className={classes.offersTitle}>
+                                        Все объявления в Брестской области
+                                    </h1>
+                                    <div className={classes.offersTypes}>
+                                        <button
+                                            className={`${classes.offersType} ${classes.active}`}
+                                        >
+                                            По новизне
+                                        </button>
+                                        <button className={classes.offersType}>
+                                            По новизне
+                                        </button>
+                                        <button className={classes.offersType}>
+                                            По новизне
+                                        </button>
+                                    </div>
+
+                                    <div className={classes.offersWrapper}>
+                                        {testArr.map((el, i) => (
+                                            <Offer key={i} />
+                                        ))}
+                                    </div>
+                                    <button className={classes.offersAllBtn}>
+                                        Смотреть все объявления
+                                    </button>
+                                    <Pagination />
                                 </section>
                             </div>
                         </Container>

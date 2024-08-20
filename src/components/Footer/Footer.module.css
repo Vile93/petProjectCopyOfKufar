@@ -1,0 +1,110 @@
+.wrapper {
+    padding: 32px 24px;
+    background-color: #4b4b4b;
+}
+
+.promo {
+    padding: 24px 32px;
+    background-color: #313131;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 16px;
+}
+
+.link {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.link path {
+    transition: 0.3s all;
+    color: #808080;
+}
+
+.link .promoText {
+    transition: 0.3s all;
+}
+
+.link:hover .promoText {
+    color: #007aff;
+}
+
+.link:hover path {
+    transition: 0.3s all;
+    color: #007aff;
+}
+
+.flexWrapper {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.info {
+    font-size: 14px;
+    color: #a6a6a6;
+}
+
+.lang {
+    transition: 2.3s all;
+    position: relative;
+    min-width: 120px;
+    height: 32px;
+    background-color: #313131;
+    border-radius: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.langRU,
+.langBY {
+    flex: 1;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.langRU {
+    position: relative;
+    right: 3px;
+    color: #808080;
+    cursor: pointer;
+}
+
+.langBY {
+    position: relative;
+    left: 3px;
+    color: #808080;
+    cursor: pointer;
+}
+
+.lang::before {
+    transition: transform 0.3s ease;
+    content: '';
+    position: absolute;
+    background: #4b4e4f;
+    width: 50%;
+    height: 26px;
+    top: 50%;
+    border-radius: 48px;
+}
+
+@media (max-width: 568px) {
+    .promo {
+        flex-direction: column;
+        width: 100%;
+    }
+    .flexWrapper {
+        gap: 8px;
+    }
+    .lang {
+        min-width: 80px;
+    }
+    .info {
+        font-size: 10px;
+    }
+}

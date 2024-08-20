@@ -1,8 +1,8 @@
-.container {
+/* .container {
     margin: 0 auto;
     max-width: 1320px;
     height: 100%;
-}
+} */
 
 .otherLinks {
     transition: color 0.1s ease-out;
@@ -137,6 +137,7 @@
 }
 
 .searchIcon {
+    height: 40px;
     padding: 0 8px;
     background: #ededed;
     border-top-right-radius: 8px;
@@ -533,6 +534,24 @@
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     cursor: pointer;
+}
+
+.divisionLine {
+    width: 100%;
+    height: 1px;
+    background-color: #ededed;
+}
+
+.filterElectionLine {
+    margin: 8px;
+}
+
+.divisionLinePagination {
+    margin: 24px 0;
+}
+
+.seoLinks {
+    margin-bottom: 100px;
 }
 
 @media (max-width: 1024px) {

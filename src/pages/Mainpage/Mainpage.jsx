@@ -20,6 +20,9 @@ import HeaderLocationDropdown from '../../components/HeaderLocationDropdown/Head
 import NewsBanner from '../../components/NewsBanner/NewsBanner';
 import Offer from '../../components/Offer/Offer';
 import Pagination from '../../components/Pagination/Pagination';
+import SeoLink from '../../components/SeoLink/SeoLink';
+import Footer from '../../components/Footer/Footer';
+
 export default function Mainpage() {
     const linesRef = useRef();
     const searchIconRef = useRef();
@@ -513,9 +516,9 @@ export default function Mainpage() {
                                         {' '}
                                         <Banner
                                             background={
-                                                'linear-gradient(90deg,#d6f2e6,#7fd5b1)'
+                                                'linear-gradient(90deg, #d6f2e6, #7fd5b1)'
                                             }
-                                            defaultBackground={'#d6f2e6;'}
+                                            /*  defaultBackground={'#d6f2e6;'} */
                                         />
                                     </div>
                                 </section>
@@ -608,6 +611,9 @@ export default function Mainpage() {
                                                 }
                                             >
                                                 <div
+                                                    className={`${classes.divisionLine} ${classes.filterElectionLine}`}
+                                                ></div>
+                                                <div
                                                     className={
                                                         classes.filterElectionWrapper
                                                     }
@@ -655,6 +661,9 @@ export default function Mainpage() {
                                                         </div>
                                                     </label>
                                                 </div>
+                                                <div
+                                                    className={`${classes.divisionLine} ${classes.filterElectionLine}`}
+                                                ></div>
                                             </div>
                                             <div
                                                 className={classes.filterSticky}
@@ -716,7 +725,18 @@ export default function Mainpage() {
                                 </section>
                             </div>
                         </Container>
+                        <div
+                            className={`${classes.divisionLine} ${classes.divisionLinePagination}`}
+                        ></div>
+                        <Container>
+                            <section className={classes.seoLinks}>
+                                <SeoLink />
+                                <SeoLink />
+                                <SeoLink />
+                            </section>
+                        </Container>
                     </main>
+                    <Footer />
                 </Swiper>
             </Swiper>
         </div>

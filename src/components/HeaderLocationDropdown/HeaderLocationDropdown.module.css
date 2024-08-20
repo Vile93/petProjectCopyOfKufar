@@ -3,6 +3,8 @@
     font-weight: 600;
     font-size: 14px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .locationWrapper {

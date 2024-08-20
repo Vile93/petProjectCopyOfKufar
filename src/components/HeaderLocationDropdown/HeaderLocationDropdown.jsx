@@ -31,9 +31,7 @@ export default function HeaderLocationDropdown({ locationWrapperRef }) {
     }, [locationWrapperRef]);
     return (
         <div
-            className={`${classes.location} ${
-                classes.locationWrapper
-            } ${'unactive'}`}
+            className={`${classes.location} ${'unactive'}`}
             ref={locationWrapperRef}
         >
             <div

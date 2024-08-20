@@ -1,15 +1,23 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import classes from './Banner.module.css';
-
-export default function Banner({ background, defaultBackground }) {
-    const Wrapper = styled.div`
-    ${defaultBackground ? `background:${defaultBackground}` : ''}
-&: before{background:${background}
+const Wrapper = styled.div`
+    ${(props) =>
+        props.$defaultBackground
+            ? `background:${(props) => props.$defaultBackground}`
+            : ''}
+    &:before {
+        background: ${(props) => props.$background};
+    }
 `;
+export default function Banner({ background, defaultBackground }) {
     return (
         <Link to={'/'}>
-            <Wrapper className={classes.categoryBannerWrapper}>
+            <Wrapper
+                className={classes.categoryBannerWrapper}
+                $background={background}
+                $defaultBackground={defaultBackground}
+            >
                 <div className={classes.categoryBannerLeft}>
                     <div className={classes.categoryBannerTop}>
                         <div className={classes.categoryBannerTitle}>
